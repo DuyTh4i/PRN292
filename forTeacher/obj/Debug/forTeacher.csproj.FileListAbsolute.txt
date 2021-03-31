@@ -1,0 +1,12 @@
+C:\Users\Administrator\source\repos\Project PRN\forTeacher\bin\Debug\forTeacher.exe
+C:\Users\Administrator\source\repos\Project PRN\forTeacher\bin\Debug\forTeacher.pdb
+C:\Users\Administrator\source\repos\Project PRN\forTeacher\obj\Debug\forTeacher.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\Project PRN\forTeacher\obj\Debug\forTeacher.Form1.resources
+C:\Users\Administrator\source\repos\Project PRN\forTeacher\obj\Debug\forTeacher.Properties.Resources.resources
+C:\Users\Administrator\source\repos\Project PRN\forTeacher\obj\Debug\forTeacher.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\Project PRN\forTeacher\obj\Debug\forTeacher.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\Project PRN\forTeacher\obj\Debug\forTeacher.exe
+C:\Users\Administrator\source\repos\Project PRN\forTeacher\obj\Debug\forTeacher.pdb
+C:\Users\Administrator\source\repos\Project PRN\forTeacher\obj\Debug\forTeacher.Login.resources
+C:\Users\Administrator\source\repos\Project PRN\forTeacher\bin\Debug\forTeacher.exe.config
+C:\Users\Administrator\source\repos\Project PRN\forTeacher\obj\Debug\forTeacher.Update.resources
