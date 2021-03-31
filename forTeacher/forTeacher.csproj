@@ -51,11 +51,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Update.cs">
+    <Compile Include="Logic\ProgressTest.cs" />
+    <Compile Include="ProgressTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Update.Designer.cs">
-      <DependentUpon>Update.cs</DependentUpon>
+    <Compile Include="ProgressTest.Designer.cs">
+      <DependentUpon>ProgressTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\Lab.cs" />
+    <Compile Include="Lab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab.Designer.cs">
+      <DependentUpon>Lab.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -68,8 +76,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Update.resx">
-      <DependentUpon>Update.cs</DependentUpon>
+    <EmbeddedResource Include="ProgressTest.resx">
+      <DependentUpon>ProgressTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab.resx">
+      <DependentUpon>Lab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

@@ -1,4 +1,5 @@
 ﻿using forTeacher.DataAcess;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,10 +80,31 @@ namespace forTeacher
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string[] ID = listBox1.SelectedValue.ToString().Split('-');
-            Update u = new Update(TeacherID, DAO.getMarkID(TeacherID, comboBox1.SelectedValue.ToString(), ID[0], ID[1]), DAO.getLabMark(TeacherID, comboBox1.SelectedValue.ToString(), ID[0], ID[1]));
+            if (DAO.getDate(comboBox1.SelectedValue.ToString())>=DateTime.Today) {
+                string[] ID = listBox1.SelectedValue.ToString().Split('-');
+                Lab u = new Lab(TeacherID, DAO.getMarkID(TeacherID, comboBox1.SelectedValue.ToString(), ID[0], ID[1]), DAO.getLabMark(TeacherID, comboBox1.SelectedValue.ToString(), ID[0], ID[1]));
+                this.Hide();
+                u.Show();
+            }
+            else
+            {
+                MessageBox.Show("this semester is finished");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (DAO.getDate(comboBox1.SelectedValue.ToString()) >= DateTime.Today)
+            {
+                string[] ID = listBox1.SelectedValue.ToString().Split('-');
+            ProgressTest pt = new ProgressTest(TeacherID, DAO.getMarkID(TeacherID, comboBox1.SelectedValue.ToString(), ID[0], ID[1]), DAO.getPTMark(TeacherID, comboBox1.SelectedValue.ToString(), ID[0], ID[1]));
             this.Hide();
-            u.Show();
+            pt.Show();
+            }
+            else
+            {
+                MessageBox.Show("this semester is finished");
+            }
         }
     }
 }

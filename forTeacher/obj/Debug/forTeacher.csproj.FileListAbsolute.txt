@@ -9,4 +9,5 @@ C:\Users\Administrator\source\repos\Project PRN\forTeacher\obj\Debug\forTeacher.
 C:\Users\Administrator\source\repos\Project PRN\forTeacher\obj\Debug\forTeacher.pdb
 C:\Users\Administrator\source\repos\Project PRN\forTeacher\obj\Debug\forTeacher.Login.resources
 C:\Users\Administrator\source\repos\Project PRN\forTeacher\bin\Debug\forTeacher.exe.config
-C:\Users\Administrator\source\repos\Project PRN\forTeacher\obj\Debug\forTeacher.Update.resources
+C:\Users\Administrator\source\repos\Project PRN\forTeacher\obj\Debug\forTeacher.Lab.resources
+C:\Users\Administrator\source\repos\Project PRN\forTeacher\obj\Debug\forTeacher.ProgressTest.resources

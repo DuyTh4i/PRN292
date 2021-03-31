@@ -1,0 +1,11 @@
+C:\Users\Administrator\source\repos\Project PRN\scoreView\bin\scoreView.dll.config
+C:\Users\Administrator\source\repos\Project PRN\scoreView\bin\scoreView.dll
+C:\Users\Administrator\source\repos\Project PRN\scoreView\bin\scoreView.pdb
+C:\Users\Administrator\source\repos\Project PRN\scoreView\bin\forTeacher.exe
+C:\Users\Administrator\source\repos\Project PRN\scoreView\bin\forTeacher.pdb
+C:\Users\Administrator\source\repos\Project PRN\scoreView\bin\forTeacher.exe.config
+C:\Users\Administrator\source\repos\Project PRN\scoreView\obj\Debug\scoreView.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\Project PRN\scoreView\obj\Debug\scoreView.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\Project PRN\scoreView\obj\Debug\scoreView.csproj.CopyComplete
+C:\Users\Administrator\source\repos\Project PRN\scoreView\obj\Debug\scoreView.dll
+C:\Users\Administrator\source\repos\Project PRN\scoreView\obj\Debug\scoreView.pdb
