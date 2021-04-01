@@ -68,15 +68,10 @@ namespace forTeacher
             }
             for (int i = 0; i < ID.Count; i++)
             {
-                if (lab[i].lab1.Length > 0)
-                    DAO.updateLab1Mark(ID[i], lab[i].lab1);
-                if (lab[i].lab2.Length > 0)
-                    DAO.updateLab2Mark(ID[i], lab[i].lab2);
-                if (lab[i].lab3.Length > 0)
-                    DAO.updateLab3Mark(ID[i], lab[i].lab3);
-                if (lab[i].lab4.Length > 0)
-                    DAO.updateLab4Mark(ID[i], lab[i].lab4);
-
+                DAO.updateLab1Mark(ID[i], lab[i].lab1);
+                DAO.updateLab2Mark(ID[i], lab[i].lab2);
+                DAO.updateLab3Mark(ID[i], lab[i].lab3);
+                DAO.updateLab4Mark(ID[i], lab[i].lab4);
             }
             MessageBox.Show("DONE");
         }

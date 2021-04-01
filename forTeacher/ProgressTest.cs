@@ -61,11 +61,8 @@ namespace forTeacher
             }
             for (int i = 0; i < ID.Count; i++)
             {
-                if (pt[i].pt1.Length > 0)
                     DAO.updatePT1Mark(ID[i], pt[i].pt1);
-                if (pt[i].pt2.Length > 0)
                     DAO.updatePT2Mark(ID[i], pt[i].pt2);
-
             }
             MessageBox.Show("DONE");
         }

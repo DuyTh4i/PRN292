@@ -32,6 +32,8 @@ namespace forTeacher
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.fe = new System.Windows.Forms.Button();
+            this.pe = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -48,7 +50,7 @@ namespace forTeacher
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(992, 9);
+            this.label1.Location = new System.Drawing.Point(1218, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
@@ -56,7 +58,7 @@ namespace forTeacher
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(985, 31);
+            this.button1.Location = new System.Drawing.Point(1272, 31);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -66,6 +68,8 @@ namespace forTeacher
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.fe);
+            this.groupBox1.Controls.Add(this.pe);
             this.groupBox1.Controls.Add(this.button8);
             this.groupBox1.Controls.Add(this.button7);
             this.groupBox1.Controls.Add(this.button3);
@@ -77,9 +81,29 @@ namespace forTeacher
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 60);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1048, 609);
+            this.groupBox1.Size = new System.Drawing.Size(1385, 609);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            // 
+            // fe
+            // 
+            this.fe.Location = new System.Drawing.Point(1109, 577);
+            this.fe.Name = "fe";
+            this.fe.Size = new System.Drawing.Size(75, 23);
+            this.fe.TabIndex = 14;
+            this.fe.Text = "FE";
+            this.fe.UseVisualStyleBackColor = true;
+            this.fe.Visible = false;
+            // 
+            // pe
+            // 
+            this.pe.Location = new System.Drawing.Point(880, 577);
+            this.pe.Name = "pe";
+            this.pe.Size = new System.Drawing.Size(75, 23);
+            this.pe.TabIndex = 13;
+            this.pe.Text = "PE";
+            this.pe.UseVisualStyleBackColor = true;
+            this.pe.Visible = false;
             // 
             // button8
             // 
@@ -101,7 +125,7 @@ namespace forTeacher
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(776, 577);
+            this.button3.Location = new System.Drawing.Point(605, 577);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(92, 23);
             this.button3.TabIndex = 7;
@@ -111,7 +135,7 @@ namespace forTeacher
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(475, 577);
+            this.button2.Location = new System.Drawing.Point(383, 577);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 6;
@@ -125,7 +149,8 @@ namespace forTeacher
             this.dataGridView1.Location = new System.Drawing.Point(217, 24);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(814, 536);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1159, 536);
             this.dataGridView1.TabIndex = 5;
             // 
             // label3
@@ -168,7 +193,7 @@ namespace forTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 681);
+            this.ClientSize = new System.Drawing.Size(1409, 681);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -198,6 +223,8 @@ namespace forTeacher
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button fe;
+        private System.Windows.Forms.Button pe;
     }
 }
 

@@ -27,11 +27,15 @@ namespace forTeacher
             }
             else
             {
-                if(!DAO.checkAccExist(username,password)||DAO.accRole(username,password) !=1)
+                if(!DAO.checkAccExist(username,password)||DAO.accRole(username,password) == 2)
                     MessageBox.Show("wrong username or password");
                 else
                 {
-                    Form1 f = new Form1(DAO.getTeacherID(username,password));
+                    Form1 f;
+                    if (DAO.accRole(username, password) == 1)
+                        f = new Form1(DAO.getTeacherID(username, password));
+                    else
+                        f = new Form1();
                     this.Hide();
                     f.Show();
                 }
