@@ -1,7 +1,7 @@
 ﻿
 namespace forTeacher
 {
-    partial class ProgressTest
+    partial class PE
     {
         /// <summary>
         /// Required designer variable.
@@ -44,14 +44,14 @@ namespace forTeacher
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(805, 454);
+            this.groupBox1.Size = new System.Drawing.Size(784, 450);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Progress Test";
+            this.groupBox1.Text = "Practical Exam";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(673, 413);
+            this.button2.Location = new System.Drawing.Point(634, 409);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
@@ -61,7 +61,7 @@ namespace forTeacher
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(76, 413);
+            this.button1.Location = new System.Drawing.Point(66, 409);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -74,20 +74,19 @@ namespace forTeacher
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(7, 20);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(792, 368);
+            this.dataGridView1.Size = new System.Drawing.Size(768, 349);
             this.dataGridView1.TabIndex = 0;
-
             // 
-            // ProgressTest
+            // PE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 479);
+            this.ClientSize = new System.Drawing.Size(800, 475);
             this.Controls.Add(this.groupBox1);
-            this.Name = "ProgressTest";
-            this.Text = "Form2";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Update_FormClosed);
-            this.Load += new System.EventHandler(this.Update_Load);
+            this.Name = "PE";
+            this.Text = "PE";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PE_FormClosed);
+            this.Load += new System.EventHandler(this.PE_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -97,8 +96,8 @@ namespace forTeacher
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

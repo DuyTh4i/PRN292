@@ -13,13 +13,20 @@ namespace forTeacher
 {
     public partial class Lab : Form
     {
+        Form1 f = new Form1();
         DataTable Mark;
-        string TeacherID;
+        string TeacherID="";
         List<int> ID;
         public Lab(string teacherID, List<int> id, DataTable mark)
         {
             Mark = mark;
             TeacherID = teacherID;
+            ID = id;
+            InitializeComponent();
+        }
+        public Lab( List<int> id, DataTable mark)
+        {
+            Mark = mark;
             ID = id;
             InitializeComponent();
         }
@@ -36,7 +43,9 @@ namespace forTeacher
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1(TeacherID);
+            if (TeacherID.Length > 0)
+                f = new Form1(TeacherID);
+            
             this.Hide();
             f.Show();
         }

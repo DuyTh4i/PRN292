@@ -45,13 +45,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAcess\DAO.cs" />
+    <Compile Include="FE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FE.Designer.cs">
+      <DependentUpon>FE.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logic\Final.cs" />
+    <Compile Include="Logic\mark.cs" />
     <Compile Include="Logic\ProgressTest.cs" />
+    <Compile Include="PE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PE.Designer.cs">
+      <DependentUpon>PE.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProgressTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,8 +87,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FE.resx">
+      <DependentUpon>FE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PE.resx">
+      <DependentUpon>PE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressTest.resx">
       <DependentUpon>ProgressTest.cs</DependentUpon>

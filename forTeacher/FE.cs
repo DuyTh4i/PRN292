@@ -11,70 +11,62 @@ using System.Windows.Forms;
 
 namespace forTeacher
 {
-    public partial class ProgressTest : Form
+    public partial class FE : Form
     {
-        DataTable Mark;
-        string TeacherID="";
-        List<int> ID;
         Form1 f = new Form1();
-        public ProgressTest(string teacherID, List<int> id, DataTable mark)
-        {
-            Mark = mark;
-            TeacherID = teacherID;
-            ID = id;
-            InitializeComponent();
-        }
-        public ProgressTest(List<int> id, DataTable mark)
+        List<int> ID;
+        DataTable Mark;
+        public FE(List<int> id, DataTable mark)
         {
             Mark = mark;
             ID = id;
             InitializeComponent();
         }
 
-        private void Update_Load(object sender, EventArgs e)
+        private void FE_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = Mark;
+
         }
 
-        private void Update_FormClosed(object sender, FormClosedEventArgs e)
+        private void FE_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (TeacherID.Length > 0)
-                f = new Form1(TeacherID);
+            
             this.Hide();
             f.Show();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            List<Logic.ProgressTest> pt = new List<Logic.ProgressTest>();
+            List<Final> fe = new List<Final>();
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                string pt1 = null, pt2 = null;
+                string fe1 = null,fe2=null;
                 if (row.Cells[2].Value != null)
                 {
-                    pt1 = row.Cells[2].Value.ToString();
+                    fe1 = row.Cells[2].Value.ToString();
                 }
                 if (row.Cells[3].Value != null)
                 {
-                    pt2 = row.Cells[3].Value.ToString();
+                    fe2 = row.Cells[3].Value.ToString();
                 }
 
-                pt.Add(new Logic.ProgressTest(pt1, pt2));
+
+                fe.Add(new Final(fe1, fe2));
 
             }
             for (int i = 0; i < ID.Count; i++)
             {
-                    DAO.updatePT1Mark(ID[i], pt[i].pt1);
-                    DAO.updatePT2Mark(ID[i], pt[i].pt2);
+                DAO.updateFEMark(ID[i], fe[i].fe);
+                DAO.updateFEREMark(ID[i], fe[i].fer);
             }
             MessageBox.Show("DONE");
         }
-
-
     }
 }

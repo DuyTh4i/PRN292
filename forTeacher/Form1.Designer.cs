@@ -32,6 +32,7 @@ namespace forTeacher
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.fe = new System.Windows.Forms.Button();
             this.pe = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -68,6 +69,7 @@ namespace forTeacher
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.fe);
             this.groupBox1.Controls.Add(this.pe);
             this.groupBox1.Controls.Add(this.button8);
@@ -85,6 +87,17 @@ namespace forTeacher
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(52, 359);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(98, 23);
+            this.button4.TabIndex = 15;
+            this.button4.Text = "Calculate Total";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // fe
             // 
             this.fe.Location = new System.Drawing.Point(1109, 577);
@@ -94,6 +107,7 @@ namespace forTeacher
             this.fe.Text = "FE";
             this.fe.UseVisualStyleBackColor = true;
             this.fe.Visible = false;
+            this.fe.Click += new System.EventHandler(this.fe_Click);
             // 
             // pe
             // 
@@ -104,6 +118,7 @@ namespace forTeacher
             this.pe.Text = "PE";
             this.pe.UseVisualStyleBackColor = true;
             this.pe.Visible = false;
+            this.pe.Click += new System.EventHandler(this.pe_Click);
             // 
             // button8
             // 
@@ -225,6 +240,7 @@ namespace forTeacher
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button fe;
         private System.Windows.Forms.Button pe;
+        private System.Windows.Forms.Button button4;
     }
 }
 

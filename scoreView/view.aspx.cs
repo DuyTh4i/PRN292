@@ -67,7 +67,7 @@ namespace scoreView
         {
 
             string[] ID = ListBox1.SelectedValue.ToString().Split('-');
-            GridView1.DataSource = DAO.getStudentMark(Session["ID"].ToString(), DropDownList1.SelectedValue.ToString(), ID[0], ID[1]);
+            GridView1.DataSource = DAO.getStudentMark(Session["ID"].ToString(), DropDownList1.SelectedValue.ToString(),  ID[1]);
             GridView1.DataBind();
         }
         private void loadMarkBoard1()

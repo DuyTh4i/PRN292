@@ -137,6 +137,20 @@ namespace forTeacher.DataAcess
             return ExecuteSQL(sql, param);
         }
 
+        public static bool updatePEMark(int id, string pe)
+        {
+            string sql;
+            if (pe.Length > 0)
+                sql = "UPDATE Marks   SET  Practicalexam = @pe  WHERE ID = @id";
+            else
+                sql = "UPDATE Marks   SET  Practicalexam = NULL WHERE ID = @id";
+            SqlParameter[] param = { new SqlParameter("@pe", SqlDbType.Char) {Value =pe},
+                                    new SqlParameter("@id", SqlDbType.Int) {Value =id},
+            };
+            return ExecuteSQL(sql, param);
+        }
+
+        
         public static bool updatePT1Mark(int id, string pt1)
         {
             string sql;
@@ -194,25 +208,25 @@ namespace forTeacher.DataAcess
             return GetDataBySQL(sql);
 
         }
-        public static DataTable getStudentMark(string teacherID, string semesterID, string classID, string subjectID)
+        public static DataTable getStudentMark(string teacherID, string semesterID, string subjectID)
         {
             string sql = "select Students.StudentID,LastName+' '+FirstName as [Name],Lab1,Lab2,Lab3,Lab4,ProgressTest1,ProgressTest2  from AClass join Students on AClass.StudentID=Students.StudentID join Marks on AClass.StudentID = Marks.StudentID and AClass.SubjectID = Marks.SubjectID where TeacherID='" + teacherID + "' and AClass.SemesterID='" + semesterID + "' and Marks.SubjectID = '" + subjectID + "'";
             return GetDataBySQL(sql);
         }
 
 
-        public static DataTable getLabMark(string teacherID, string semesterID, string classID, string subjectID)
+        public static DataTable getLabMark(string teacherID, string semesterID,  string subjectID)
         {
             string sql = "select Students.StudentID,LastName+' '+FirstName as [Name],Lab1,Lab2,Lab3,Lab4  from AClass join Students on AClass.StudentID=Students.StudentID join Marks on AClass.StudentID = Marks.StudentID and AClass.SubjectID = Marks.SubjectID where TeacherID='" + teacherID + "' and AClass.SemesterID='" + semesterID + "' and Marks.SubjectID = '" + subjectID + "'";
             return GetDataBySQL(sql);
         }
-        public static DataTable getPTMark(string teacherID, string semesterID, string classID, string subjectID)
+        public static DataTable getPTMark(string teacherID, string semesterID,  string subjectID)
         {
             string sql = "select Students.StudentID,LastName+' '+FirstName as [Name],ProgressTest1,ProgressTest2  from AClass join Students on AClass.StudentID=Students.StudentID join Marks on AClass.StudentID = Marks.StudentID and AClass.SubjectID = Marks.SubjectID where TeacherID='" + teacherID + "' and AClass.SemesterID='" + semesterID + "' and Marks.SubjectID = '" + subjectID + "'";
             return GetDataBySQL(sql);
         }
 
-        public static List<int> getMarkID(string teacherID, string semesterID, string classID, string subjectID)
+        public static List<int> getMarkID(string teacherID, string semesterID,  string subjectID)
         {
             List<int> data = new List<int>();
             string sql = "select ID from AClass join Students on AClass.StudentID=Students.StudentID join Marks on AClass.StudentID = Marks.StudentID and AClass.SubjectID = Marks.SubjectID where TeacherID='" + teacherID + "' and AClass.SemesterID='" + semesterID + "' and Marks.SubjectID = '" + subjectID + "'";
@@ -235,13 +249,80 @@ namespace forTeacher.DataAcess
             return GetDataBySQL(sql);
         }
 
-        public static DataTable getStudentMarkAdmin( string semesterID, string subjectID)
+        public static DataTable getStudentMarkAdmin(string semesterID, string subjectID)
         {
-            string sql = "select Students.StudentID,LastName+' '+FirstName as [Name],Lab1,Lab2,Lab3,Lab4,ProgressTest1,ProgressTest2,Practicalexam,FinalExam,FinalExamResit from AClass join Students on AClass.StudentID=Students.StudentID join Marks on AClass.StudentID = Marks.StudentID and AClass.SubjectID = Marks.SubjectID where AClass.SemesterID='"+semesterID+"' and AClass.SubjectID = '"+subjectID+"'";
+            string sql = "select Students.StudentID,LastName+' '+FirstName as [Name],Lab1,Lab2,Lab3,Lab4,ProgressTest1,ProgressTest2,Practicalexam,FinalExam,FinalExamResit,Total from AClass join Students on AClass.StudentID=Students.StudentID join Marks on AClass.StudentID = Marks.StudentID and AClass.SubjectID = Marks.SubjectID where AClass.SemesterID='" + semesterID + "' and AClass.SubjectID = '" + subjectID + "'";
 
             return GetDataBySQL(sql);
         }
 
+        public static DataTable getPTMark1(string semesterID, string subjectID)
+        {
+            string sql = "select Students.StudentID,LastName+' '+FirstName as [Name],ProgressTest1,ProgressTest2  from AClass join Students on AClass.StudentID=Students.StudentID join Marks on AClass.StudentID = Marks.StudentID and AClass.SubjectID = Marks.SubjectID where AClass.SemesterID='" + semesterID + "' and Marks.SubjectID = '" + subjectID + "'";
+            return GetDataBySQL(sql);
+        }
+        public static DataTable getPEMark(string semesterID, string subjectID)
+        {
+            string sql = "select Students.StudentID,LastName+' '+FirstName as [Name],Practicalexam from AClass join Students on AClass.StudentID=Students.StudentID join Marks on AClass.StudentID = Marks.StudentID and AClass.SubjectID = Marks.SubjectID where AClass.SemesterID='" + semesterID + "' and Marks.SubjectID = '" + subjectID + "'";
+            return GetDataBySQL(sql);
+        }
+
+        public static DataTable getFEMark(string semesterID, string subjectID)
+        {
+            string sql = "select Students.StudentID,LastName+' '+FirstName as [Name],FinalExam,FinalExamResit from AClass join Students on AClass.StudentID=Students.StudentID join Marks on AClass.StudentID = Marks.StudentID and AClass.SubjectID = Marks.SubjectID where AClass.SemesterID='" + semesterID + "' and Marks.SubjectID = '" + subjectID + "'";
+            return GetDataBySQL(sql);
+        }
+        public static DataTable getLabMark1(string semesterID, string subjectID)
+        {
+            string sql = "select Students.StudentID,LastName+' '+FirstName as [Name],Lab1,Lab2,Lab3,Lab4  from AClass join Students on AClass.StudentID=Students.StudentID join Marks on AClass.StudentID = Marks.StudentID and AClass.SubjectID = Marks.SubjectID where  AClass.SemesterID='" + semesterID + "' and Marks.SubjectID = '" + subjectID + "'";
+            return GetDataBySQL(sql);
+        }
+        public static List<int> getMarkID1(string semesterID, string subjectID)
+        {
+            List<int> data = new List<int>();
+            string sql = "select ID from Marks join AClass on Marks.StudentID = AClass.StudentID and Marks.SubjectID=AClass.SubjectID where SemesterID='" + semesterID + "' and AClass.SubjectID='" + subjectID + "'";
+            foreach (DataRow dr in GetDataBySQL(sql).Rows)
+                data.Add(Convert.ToInt32(dr["ID"].ToString()));
+            return data;
+        }
+
+        public static bool updateFEMark(int id, string fe)
+        {
+            string sql;
+            if (fe.Length > 0)
+                sql = "UPDATE Marks   SET  FinalExam = @fe  WHERE ID = @id";
+            else
+                sql = "UPDATE Marks   SET  FinalExam = NULL WHERE ID = @id";
+            SqlParameter[] param = { new SqlParameter("@fe", SqlDbType.Char) {Value =fe},
+                                    new SqlParameter("@id", SqlDbType.Int) {Value =id},
+            };
+            return ExecuteSQL(sql, param);
+        }
+
+        public static bool updateFEREMark(int id, string fere)
+        {
+            string sql;
+            if (fere.Length > 0)
+                sql = "UPDATE Marks   SET  FinalExamResit = @fere  WHERE ID = @id";
+            else
+                sql = "UPDATE Marks   SET  FinalExamResit = NULL WHERE ID = @id";
+            SqlParameter[] param = { new SqlParameter("@fere", SqlDbType.Char) {Value =fere},
+                                    new SqlParameter("@id", SqlDbType.Int) {Value =id},
+            };
+            return ExecuteSQL(sql, param);
+        }
+        public static bool updateTotal(int id, string total)
+        {
+            string sql;
+            if (total.Length > 0)
+                sql = "UPDATE Marks   SET  Total = @t  WHERE ID = @id";
+            else
+                sql = "UPDATE Marks   SET  Total = NULL WHERE ID = @id";
+            SqlParameter[] param = { new SqlParameter("@t", SqlDbType.Char) {Value =total},
+                                    new SqlParameter("@id", SqlDbType.Int) {Value =id},
+            };
+            return ExecuteSQL(sql, param);
+        }
         //-----------------------------ADMIN-----------------------------------------------------------------//
 
     }
